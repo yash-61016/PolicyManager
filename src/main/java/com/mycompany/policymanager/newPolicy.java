@@ -30,32 +30,34 @@ public class newPolicy {
         newPolicy.terms = terms;
         newPolicy.name = name;
     }
-
-    public static String get_name() {
+    public String get_date() {
+        return date;
+    }
+    public String get_name() {
         return name;
     }
 
-    public static String get_Ref() {
+    public String get_Ref() {
         return ref;
     }
 
-    public static int get_numOfGad() {
+    public int get_numOfGad() {
         return numOfGad;
     }
 
-    public static int get_mostExpGad() {
+    public int get_mostExpGad() {
         return mostExpGad;
     }
 
-    public static int get_excess() {
+    public int get_excess() {
         return excess;
     }
 
-    public static int get_premium() {
+    public int get_premium() {
         return premium;
     }
 
-    public static char get_terms() {
+    public char get_terms() {
         return terms;
     }
 }

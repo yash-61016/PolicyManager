@@ -15,7 +15,8 @@ import java.util.Scanner;
  */
 public class Option3 {
 
-    public static void option3(String file_name, int month_num) {
+    @SuppressWarnings("unused")
+	public static void option3(String file_name, int month_num) {
 
         int total_policies = 0;
         int accepted_policies = 0;

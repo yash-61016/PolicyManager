@@ -93,8 +93,15 @@ public class calculations {
         }
     }
 
-    public static void policyToFile(String name, String ref, int numOfGad, int mostExpGad, int excess, int premium, char terms, String date) {
-
+    public static void policyToFile(newPolicy new_Policy) {
+    	String name = new_Policy.get_name();
+        String ref = new_Policy.get_Ref();
+        int numOfGad = new_Policy.get_numOfGad();
+        int mostExpGad = new_Policy.get_mostExpGad();
+        int excess = new_Policy.get_excess();
+        int premium = new_Policy.get_premium();
+        char terms = new_Policy.get_terms();
+        String date = new_Policy.get_date();
         PrintWriter output = null;
 
         File policy = new File("policy.txt");// create new filestream
@@ -240,7 +247,16 @@ public class calculations {
         return policy;
     }
 
-    public static void printPolicy(String client, String ref, int numOfGad, int mostExpGad, int excess, int premium,  char term, String date) {//printing the policy in the given format
+    public static void printPolicy(newPolicy new_Policy) {//printing the policy in the given format
+    	String name = new_Policy.get_name();
+        String ref = new_Policy.get_Ref();
+        int numOfGad = new_Policy.get_numOfGad();
+        int mostExpGad = new_Policy.get_mostExpGad();
+        int excess = new_Policy.get_excess();
+        int premium = new_Policy.get_premium();
+        char terms = new_Policy.get_terms();
+        String date = new_Policy.get_date();
+    	
         System.out.print("+");
         for (int i = 0; i < 45; i++) {
             System.out.print("=");
@@ -258,8 +274,8 @@ public class calculations {
             System.out.print(" ");
         }
         System.out.print("Client:");
-        System.out.print(client);
-        for (int i = 0; i < 35 - client.length(); i++) {
+        System.out.print(name);
+        for (int i = 0; i < 35 - name.length(); i++) {
             System.out.print(" ");
         }
         System.out.println("|");
@@ -285,14 +301,14 @@ public class calculations {
             System.out.print(" ");
         }
         System.out.print("Terms:");
-        String terms;
-        if (term == 'A') {
-            terms = "Annual";
+        String term;
+        if (terms == 'A') {
+            term = "Annual";
         } else {
-            terms = "Month";
+            term = "Month";
         }
-        System.out.print(terms);
-        for (int i = 0; i < 23 - terms.length(); i++) {
+        System.out.print(term);
+        for (int i = 0; i < 23 - term.length(); i++) {
             System.out.print(" ");
         }
         System.out.print("Items:");
@@ -338,8 +354,8 @@ public class calculations {
         for (int i = 0; i < 3; i++) {
             System.out.print(" ");
         }
-        System.out.print(terms + "ly");
-        for (int i = 0; i < 20 - terms.length() + 2; i++) {
+        System.out.print(term + "ly");
+        for (int i = 0; i < 20 - term.length() + 2; i++) {
             System.out.print(" ");
         }
         System.out.print("Limit per");
@@ -365,7 +381,7 @@ public class calculations {
         }
         System.out.print("Gadget:");
         String gadget;
-        if (validation.valMostExpGad(newPolicy.get_mostExpGad()) == false || validation.valGadget(newPolicy.get_numOfGad()) == false || premium == -1) {
+        if (validation.valMostExpGad(mostExpGad) == false || validation.valGadget(numOfGad) == false || premium == -1) {
             gadget = "Rejected";
         } else {
             gadget = Integer.toString(mostExpGad);

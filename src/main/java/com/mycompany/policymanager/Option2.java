@@ -15,7 +15,8 @@ import java.util.Scanner;
  */
 public class Option2 {
 
-    public static void option2(String file_name) throws FileNotFoundException {
+    @SuppressWarnings("unused")
+	public static void option2(String file_name) throws FileNotFoundException {
         int total_policies = 0;
         int accepted_policies = 0;
         int items = 0;

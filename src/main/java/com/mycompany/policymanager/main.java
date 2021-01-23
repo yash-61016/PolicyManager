@@ -14,7 +14,8 @@ import java.util.Scanner;
  */
 public class main {
 
-    public static void main(String[] args) throws IOException {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         Scanner keyb = new Scanner(System.in);
         boolean exit = true;

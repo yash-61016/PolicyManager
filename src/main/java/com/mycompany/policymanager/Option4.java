@@ -7,7 +7,6 @@ package com.mycompany.policymanager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -16,7 +15,8 @@ import java.util.Scanner;
  */
 public class Option4 {
 
-    public static void search_policy(String file_name, String text) {
+    @SuppressWarnings({ "unused", "resource" })
+	public static void search_policy(String file_name, String text) {
 
         String option = "";
         int index = 1;//to print line number
@@ -79,7 +79,8 @@ public class Option4 {
 
                 //checking if refrence number or name is equal to the seleceted line number
                 if (ref.equals(calculations.get_policy(line_num, option_array)) || name.equals(calculations.get_policy(line_num, option_array))) {
-                    calculations.printPolicy(name, ref, numOfGad, mostExpGad, excess, premium, terms, date);//printing the policy in the given format
+                	newPolicy tempPolicy = new newPolicy(name, ref, numOfGad, mostExpGad, excess, premium, terms, date);
+                    calculations.printPolicy(tempPolicy);//printing the policy in the given format
                     break;
                 }
             }
