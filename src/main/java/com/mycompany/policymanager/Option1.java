@@ -16,8 +16,10 @@ import java.util.Scanner;
  */
 public class Option1 {
     
-    public static void newPolicy() throws IOException {
-        try (Scanner in = new Scanner(System.in)) {
+    @SuppressWarnings("resource")
+	public static void newPolicy() throws IOException {
+        try  {
+        	Scanner in = new Scanner(System.in);
 			System.out.println("Enter your name:");
 			String name = in.nextLine();
 			name = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase(); // Capitalising 1st letter of name
@@ -66,6 +68,8 @@ public class Option1 {
 			calculations.policyToFile(policy);//apending policy to file
 			
 			calculations.printPolicy(policy);//printing policy
+		}catch(Exception e) {
+			
 		}
     }
     
