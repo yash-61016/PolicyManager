@@ -33,4 +33,3 @@ As well as entering the inputs identified above, the user will also provide the 
 -Policy reference number (eg: JB123A – two letters, three digits and a letter).
 -Client name (eg: J Smith – maximum of 20 characters)
 
-Once the validation/calculation has been completed, a policy summary should be output:
