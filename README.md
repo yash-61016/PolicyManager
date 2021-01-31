@@ -20,8 +20,17 @@ Basic Monthly Premiums:-
 |6|£800|Reject|
 |4|£1,200|Reject|
 
+## How program works
 The company charges an excess (the amount the client will have to pay) of £30 for each claim.
+
 Clients can choose to increase this up to £70.00 (in multiples of 10) 
 to reduce the premium – for each £10 increase the premium is reduced by 5%.
+
 The default payment term is monthly. 
 However, customers can choose to pay annually to receive an additional 10% discount.
+
+As well as entering the inputs identified above, the user will also provide the following:
+-Policy reference number (eg: JB123A – two letters, three digits and a letter).
+-Client name (eg: J Smith – maximum of 20 characters)
+
+Once the validation/calculation has been completed, a policy summary should be output:
